@@ -21,12 +21,14 @@ Sistema completo para **gestão de emergências em eventos de ciclismo**, com ba
 
     ```
     cd backend
-    python -m venv .venv
     # Ativação do ambiente virtual
+    # Linux/macOS:
+     python3 -m venv pyenv
     # Windows:
     .venv\Scripts\activate
-    # Linux/macOS:
-    source .venv/bin/activate
+    # Entrar no ambiente virtual    
+    source pyenv/bin/activate
+   
     pip install -r requirements.txt
     uvicorn main:app --reload
     ```
