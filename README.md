@@ -8,7 +8,6 @@ Sistema completo para **gestão de emergências em eventos de ciclismo**, com ba
 
 - **Cadastro** de ciclistas ("bikers"), contatos de emergência e informações de saúde.
 - **Edição** de todos os dados do cadastro.
-- **Busca** rápida por nome.
 - **Listagem** e **exportação** dos dados para CSV.
 
 ---
