@@ -1,0 +1,230 @@
+/* --- Estilos Gerais --- */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+h1, h2, h3 { color: #2c3e50; font-weight: 700; }
+h2 { font-size: 2.5rem; text-align: center; margin-bottom: 40px; }
+h3 { font-size: 1.6rem; }
+
+/* --- Header e Navegação --- */
+header {
+    background: #fff;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-link {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #16a085;
+}
+
+/* --- Seção Hero --- */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://cdn.imoveisgodoy.com.br/wp-content/uploads/2022/09/02125432/Ciclismo-600x450.webp');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+}
+.hero h2 { color: #fff; font-size: 3.5rem; }
+.hero p { font-size: 1.4rem; max-width: 800px; margin: 20px auto 40px; }
+
+.section-padding { 
+    padding: 60px 0;
+}
+.about, .benefits, .testimonials, .how-it-works { padding: 60px 0; }
+.reasons, .benefit-grid, .testimonial-grid, .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.reason-card, .benefit-item, .testimonial-card, .step-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease; 
+}
+.reason-card:hover, .benefit-item:hover, .testimonial-card:hover, .step-card:hover {
+    transform: translateY(-5px);
+}
+.reason-card h3, .benefit-item h3, .step-card h3 { color: #16a085; }
+
+/* --- Botões --- */
+.cta-button {
+    background: #16a085;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px; 
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+.cta-button:hover { background: #1abc9c; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(22, 160, 133, 0.3); } /* Sombra no hover */
+.big-cta { font-size: 1.4rem; padding: 15px 35px; }
+
+.form-container {
+    background: #fff;
+    padding: 40px;
+    margin: 40px auto; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+    max-width: 700px; 
+}
+form fieldset {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+form legend { font-weight: bold; color: #16a085; padding: 0 10px; font-size: 1.3rem; }
+.emergency-fieldset { border-color: #e74c3c; }
+.emergency-fieldset legend { color: #e74c3c; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; }
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: #1abc9c;
+    box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.2);
+    outline: none;
+}
+.form-button { display: block; width: 100%; font-size: 1.3rem; margin-top: 30px; }
+
+/* --- Página de Listagem --- */
+.list-container {
+    background: #fff;
+    padding: 40px;
+    margin: 40px auto; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+    max-width: 900px; 
+}
+
+/* ================================================================ */
+/* NOVO ESTILO PARA O CONTAINER DO FILTRO */
+/* ================================================================ */
+.filter-container {
+    margin-bottom: 25px;
+}
+.filter-container input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.filter-container input:focus {
+    border-color: #1abc9c;
+    box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.2);
+    outline: none;
+}
+/* ================================================================ */
+
+.table-wrapper { overflow-x: auto; }
+#bikers-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+#bikers-table th, #bikers-table td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; } /* Borda mais suave */
+#bikers-table th { background-color: #f2f2f2; font-weight: 600; }
+.action-buttons a, .action-buttons button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    border-radius: 6px; /* Mais arredondado */
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.edit-btn { background-color: #3498db; color: white; }
+.delete-btn { background-color: #e74c3c; color: white; }
+.edit-btn:hover { background-color: #2980b9; transform: translateY(-1px); }
+.delete-btn:hover { background-color: #c0392b; transform: translateY(-1px); }
+
+/* --- Mensagens de Status --- */
+.status-message {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: none; 
+}
+.status-success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.status-error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+
+/* --- Footer --- */
+footer { background: #2c3e50; color: #fff; text-align: center; padding: 2rem 0; margin-top: auto; }
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    header .container { flex-direction: column; gap: 15px; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .hero h2 { font-size: 2.5rem; }
+    .form-container, .list-container { padding: 25px; margin: 25px auto; }
+}

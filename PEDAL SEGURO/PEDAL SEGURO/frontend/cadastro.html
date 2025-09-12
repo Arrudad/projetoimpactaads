@@ -1,0 +1,71 @@
+
+<div id="header-placeholder"></div>
+
+<title>Cadastro de Novo Biker - Pedal Seguro</title>
+
+<div class="container">
+    <div class="form-container">
+        <h2>Cadastro de Novo Biker</h2>
+        <p>Preencha seus dados para pedalar com mais segurança.</p>
+
+        <form id="cadastro-form">
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipo_bike">Tipo de Bike Principal</label>
+                    <select id="tipo_bike" name="tipo_bike" required>
+                        <option value="MTB">Mountain Bike (MTB)</option>
+                        <option value="SPEED">Speed</option>
+                        <option value="E-BIKE">E-Bike</option>
+                        <option value="URBANA">Urbana</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pedais_participa">Pedais que costuma participar</label>
+                    <input type="text" id="pedais_participa" name="pedais_participa" placeholder="Ex: Terça e Quinta" required>
+                </div>
+                 <div class="form-group">
+                    <label>Participa de Trilhas?</label>
+                    <div>
+                        <input type="radio" id="trilha_sim" name="participa_trilha" value="true" checked>
+                        <label for="trilha_sim">Sim</label>
+                        <input type="radio" id="trilha_nao" name="participa_trilha" value="false">
+                        <label for="trilha_nao">Não</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="problema_saude">Possui algum problema de saúde relevante? (Opcional)</label>
+                    <textarea id="problema_saude" name="problema_saude" rows="3" placeholder="Ex: Asma, diabetes, alergia a dipirona..."></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset class="emergency-fieldset">
+                <legend>Contato de Emergência</legend>
+                 <div class="form-group">
+                    <label for="contato_nome">Nome do Contato</label>
+                    <input type="text" id="contato_nome" name="contato_nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="contato_parentesco">Grau de Parentesco</label>
+                    <input type="text" id="contato_parentesco" name="contato_parentesco" placeholder="Ex: Esposa, Mãe, Amigo" required>
+                </div>
+                <div class="form-group">
+                    <label for="contato_telefone">Telefone do Contato</label>
+                    <input type="tel" id="contato_telefone" name="contato_telefone" placeholder="(XX) XXXXX-XXXX" required>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="cta-button form-button">Cadastrar Biker</button>
+        </form>
+        <div id="status-message" class="status-message"></div>
+    </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="/frontend/scripts/layout.js"></script>
+<script src="/frontend/scripts/api.js"></script>
+<script src="/frontend/scripts/cadastro.js"></script>

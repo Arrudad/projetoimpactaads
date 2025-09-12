@@ -1,0 +1,66 @@
+# GUIA DE INSTALAÇÃO E EXECUÇÃO DO PROJETO "PEDAL SEGURO"
+
+Este guia mostra como configurar e executar o projeto em um ambiente limpo, sem necessidade de conhecimento prévio sobre a estrutura.
+
+## PRÉ-REQUISITOS
+
+- Python 3.8 ou superior instalado em seu sistema.
+  (Você pode baixar em: https://www.python.org/downloads/)
+
+## PASSO 1: PREPARAR A PASTA DO PROJETO
+
+1.  Coloque todos os arquivos do projeto em uma única pasta.
+2.  Abra o terminal (Prompt de Comando, PowerShell, ou Terminal do Linux/macOS) e navegue até essa pasta.
+    Exemplo:
+    cd C:\Caminho\Para\Seu\Projeto
+
+## PASSO 2: CRIAR UM AMBIENTE VIRTUAL (PRÁTICA RECOMENDADA)
+
+Mesmo que a solicitação tenha sido "sem venv", usar um ambiente virtual é a maneira correta e profissional de gerenciar dependências e evitar conflitos. É um passo simples e crucial.
+
+1.  No terminal, execute o comando para criar o ambiente virtual:
+    python -m venv .venv
+
+2.  Ative o ambiente virtual:
+    - No Windows:
+      .\.venv\Scripts\activate
+    - No macOS/Linux:
+      source .venv/bin/activate
+
+Seu terminal deverá agora mostrar `(.venv)` no início da linha.
+
+## PASSO 3: INSTALAR AS DEPENDÊNCIAS
+
+Com o ambiente virtual ativo, instale todas as bibliotecas Python necessárias, que estão listadas no arquivo `requirements.txt`.
+
+1.  Execute o seguinte comando no terminal:
+    pip install -r requirements.txt
+
+Isso instalará o FastAPI, Uvicorn, SQLModel e outras ferramentas necessárias.
+
+## PASSO 4: EXECUTAR A APLICAÇÃO
+
+Agora que tudo está instalado, você pode iniciar o servidor web.
+
+1.  No mesmo terminal, execute o comando:
+    uvicorn main:app --reload
+
+    - `main`: Refere-se ao arquivo `main.py`.
+    - `app`: Refere-se ao objeto `app = FastAPI()` dentro do `main.py`.
+    - `--reload`: Faz com que o servidor reinicie automaticamente se você alterar algum arquivo de código.
+
+2.  Após executar o comando, você verá uma saída parecida com esta:
+    INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+
+## PASSO 5: ACESSAR O SITE
+
+1.  Abra seu navegador de internet (Chrome, Firefox, etc.).
+2.  Acesse o seguinte endereço:
+    http://127.0.0.1:8000
+
+A página principal do site "Pedal Seguro" será exibida. Você pode navegar pelos links "Cadastro", "Listagem & Edição" e "Exportar CSV" no topo da página.
+
+## PARA PARAR A APLICAÇÃO
+
+- Volte para a janela do terminal onde o `uvicorn` está rodando.
+- Pressione `Ctrl + C` para parar o servidor.
