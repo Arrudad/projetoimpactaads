@@ -1,0 +1,35 @@
+<div id="header-placeholder"></div>
+
+<title>Lista de Bikers - Pedal Seguro</title>
+
+<div class="container">
+    <div class="list-container">
+        <h2>Bikers Cadastrados</h2>
+        <p>Gerencie os participantes do grupo. Clique em "Editar" para atualizar as informações ou em "Excluir" para remover um cadastro.</p>
+
+        <div class="filter-container">
+            <input type="text" id="filter-input" placeholder="Digite um nome para filtrar a lista...">
+        </div>
+        <div id="status-message" class="status-message"></div>
+        <div class="table-wrapper">
+            <table id="bikers-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Tipo de Bike</th>
+                        <th>Problema de Saúde</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+        <p id="loading-message">Carregando bikers...</p>
+    </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="/frontend/scripts/layout.js"></script>
+<script src="/frontend/scripts/api.js"></script>
+<script src="/frontend/scripts/listagem.js"></script>
